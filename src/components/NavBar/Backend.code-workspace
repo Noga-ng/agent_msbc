@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "Backend",
+			"path": "../../../../Backend"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"php.version": "8.2"
+	}
+}

@@ -1,0 +1,272 @@
+.ms-dashboard {
+    padding-top: 24px;
+    padding-bottom: 44px;
+    color: #18342f;
+}
+.ms-dash-header {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+}
+.ms-dash-eyebrow {
+    color: #168b69;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+.ms-dash-header h1 {
+    font-size: clamp(25px, 3vw, 36px);
+    font-weight: 800;
+    margin: 6px 0;
+}
+.ms-dash-header p,
+.ms-dash-panel-heading p {
+    color: #7d8b88;
+    font-size: 13px;
+    margin: 5px 0;
+}
+.ms-dash-actions {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ms-dash-mode {
+    border-radius: 100px;
+    padding: 8px 12px;
+    background: #e9f8f1;
+    color: #118062;
+    font-size: 12px;
+    font-weight: 700;
+}
+.ms-dash-refresh,
+.ms-dash-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 39px;
+    padding: 9px 13px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #dbe5e1;
+    background: white;
+    color: #1b5546;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ms-dash-add {
+    background: #118566;
+    color: white;
+    border-color: #118566;
+}
+.ms-dash-refresh:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+.ms-dash-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.ms-dash-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background: white;
+    border: 1px solid #eef1ef;
+    border-radius: 18px;
+    padding: 23px;
+    box-shadow: 0 7px 25px rgba(28, 56, 49, 0.04);
+}
+.ms-dash-stat svg {
+    font-size: 23px;
+    color: #198c70;
+}
+.ms-dash-stat span {
+    font-size: 12px;
+    color: #697f77;
+}
+.ms-dash-stat strong {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.ms-dash-stat small {
+    font-size: 11px;
+    color: #8b9a94;
+}
+.ms-dash-stat.primary {
+    background: linear-gradient(135deg, #155f4b, #0e9270);
+    color: white;
+}
+.ms-dash-stat.primary svg,
+.ms-dash-stat.primary span,
+.ms-dash-stat.primary small {
+    color: #d7f7e9;
+}
+.ms-dash-charts {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(290px, 1fr);
+    gap: 18px;
+}
+.ms-dash-panel {
+    min-width: 0;
+    background: white;
+    border: 1px solid #eef1ef;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 6px 24px rgba(27, 61, 49, 0.035);
+}
+.ms-dash-panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.ms-dash-panel-heading h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+}
+.ms-dash-panel-heading a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #178366;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.ms-dash-alert {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: #9c3434;
+    background: #fff3f3;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 16px 0;
+}
+.ms-dash-alert span {
+    flex: 1;
+}
+.ms-dash-alert button {
+    background: white;
+    border: 1px solid #e9a7a7;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.ms-dash-loading,
+.ms-dash-empty {
+    text-align: center;
+    padding: 62px 16px;
+    border-radius: 18px;
+    background: white;
+    color: #62756e;
+}
+.ms-dash-empty svg {
+    margin: auto;
+    color: #159271;
+}
+.ms-dash-empty h2 {
+    font-size: 19px;
+    margin: 12px 0;
+}
+.ms-dash-empty a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    color: #118566;
+    font-weight: 700;
+}
+.ms-dash-recent {
+    display: flex;
+    flex-direction: column;
+}
+.ms-dash-person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eef1ef;
+}
+.ms-dash-person:last-child {
+    border: 0;
+}
+.ms-dash-avatar {
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+    background: #e6f5ef;
+    color: #168363;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+.ms-dash-person-name {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+.ms-dash-person-name strong {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ms-dash-person-name small {
+    color: #899892;
+    font-size: 10px;
+    margin-top: 4px;
+}
+.ms-dash-status {
+    font-size: 10px;
+    background: #fff2dc;
+    color: #9e6b0c;
+    padding: 6px 8px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+.ms-dash-status.active {
+    background: #e3f8ed;
+    color: #107753;
+}
+@media (max-width: 1050px) {
+    .ms-dash-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ms-dash-charts {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 550px) {
+    .ms-dash-stats {
+        gap: 10px;
+    }
+    .ms-dash-stat {
+        padding: 15px;
+    }
+    .ms-dash-stat strong {
+        font-size: 25px;
+    }
+    .ms-dash-panel {
+        padding: 14px;
+    }
+    .ms-dash-header {
+        align-items: flex-start;
+    }
+}
+
+.ms-dash-status.rejected { background: #fff0ed; color: #a23a2e; }

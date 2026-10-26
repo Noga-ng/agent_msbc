@@ -1,0 +1,177 @@
+.member-edit-page {
+    max-width: 1050px;
+    margin-inline: auto;
+    padding-block: 28px 64px;
+}
+.member-edit-heading {
+    margin: 0 0 20px;
+}
+.member-edit-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #228363;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 22px;
+    text-decoration: none;
+}
+.member-edit-back:hover {
+    color: #136449;
+}
+.member-edit-title {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.member-edit-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 17px;
+    background: #e4f7ee;
+    color: #13845c;
+    font-size: 23px;
+}
+.member-edit-heading h1 {
+    font-size: clamp(24px, 3vw, 33px);
+    font-weight: 800;
+    color: #173b30;
+    line-height: 1.2;
+    margin: 2px 0;
+}
+.member-edit-title p {
+    color: #647b73;
+    font-size: 14px;
+}
+.member-edit-eyebrow {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    font-weight: 800;
+    color: #178d64 !important;
+}
+.member-edit-notice {
+    color: #516761;
+    font-size: 13px;
+    line-height: 1.65;
+    margin-top: 18px;
+    border-left: 3px solid #37a47b;
+    padding: 10px 14px;
+    background: #f0f9f5;
+    border-radius: 0 10px 10px 0;
+}
+.member-edit-form {
+    max-width: none;
+}
+.member-edit-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+.member-edit-steps button {
+    background: #f2f5f4;
+    border: 1px solid #e0ebe6;
+    border-radius: 999px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #71827a;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+.member-edit-steps button.is-active {
+    color: #137a55;
+    background: #e6f6ec;
+    border-color: #b6e7c9;
+}
+.member-edit-steps button:hover {
+    transform: translateY(-1px);
+}
+.member-edit-steps span {
+    background: #fff;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    display: inline-grid;
+    place-items: center;
+}
+.member-edit-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 10px 0 20px;
+}
+.member-edit-photo-hint {
+    font-size: 12px;
+    color: #55786a;
+    margin-top: 8px;
+}
+.member-edit-error {
+    margin: 18px 0 8px;
+}
+.member-edit-actions {
+    margin-top: 26px;
+}
+.member-profile-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 9px 13px;
+    background: #e9f7f0;
+    color: #087951;
+    border: 1px solid #bce8d1;
+    border-radius: 10px;
+    font-weight: 750;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+.member-profile-edit:hover {
+    background: #d7f3e5;
+    transform: translateY(-2px);
+}
+.member-family-edit {
+    margin-top: 9px;
+}
+@media (max-width: 640px) {
+    .member-edit-page {
+        padding: 20px 14px 54px;
+    }
+    .member-edit-options {
+        grid-template-columns: 1fr;
+    }
+    .member-edit-title {
+        align-items: flex-start;
+    }
+    .member-edit-steps {
+        gap: 6px;
+    }
+    .member-edit-steps button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    .member-edit-actions {
+        flex-wrap: wrap;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .member-edit-steps button,
+    .member-profile-edit {
+        transition: none;
+    }
+    .member-edit-steps button:hover,
+    .member-profile-edit:hover {
+        transform: none;
+    }
+}

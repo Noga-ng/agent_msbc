@@ -1,0 +1,289 @@
+/* Mobile-first refinements for the existing MSBC account screen. */
+.account-page {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+.account-page button,
+.account-page input,
+.account-page textarea {
+  touch-action: manipulation;
+}
+.account-page button:focus-visible,
+.account-page input:focus-visible,
+.account-page textarea:focus-visible {
+  outline: 3px solid #22a889;
+  outline-offset: 2px;
+}
+@media (max-width: 900px) {
+  .account-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .account-side {
+    min-width: 0;
+  }
+  .account-side-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    padding: 8px;
+  }
+  .account-side-menu::-webkit-scrollbar {
+    display: none;
+  }
+  .account-side-title,
+  .account-side-help {
+    display: none;
+  }
+  .account-side-menu button {
+    flex: 1 0 auto;
+    width: auto;
+    min-height: 44px;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 13px;
+    white-space: nowrap;
+  }
+  .account-side-menu button > svg:last-child {
+    display: none;
+  }
+  .account-panel {
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .account-page {
+    width: 100%;
+    padding: 16px 12px 40px;
+  }
+  .account-heading {
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .account-heading h1 {
+    font-size: 30px;
+  }
+  .account-heading p {
+    font-size: 12px;
+    max-width: 280px;
+    line-height: 1.5;
+  }
+  .account-heading .account-btn {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 0;
+  }
+  .account-heading .account-btn svg {
+    font-size: 18px;
+    flex: 0 0 auto;
+  }
+  .account-cover {
+    padding: 18px 16px 20px;
+    border-radius: 18px;
+  }
+  .account-cover-top {
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .account-cover-kicker,
+  .account-session-dot {
+    font-size: 9px;
+    letter-spacing: 0.045em;
+  }
+  .account-cover-profile {
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 26px;
+    align-items: center;
+  }
+  .account-photo {
+    width: 66px;
+    height: 66px;
+    border-radius: 17px;
+  }
+  .account-photo > span {
+    font-size: 24px;
+  }
+  .account-photo-status {
+    width: 24px;
+    height: 24px;
+  }
+  .account-cover-name h2 {
+    font-size: clamp(17px, 5.5vw, 25px);
+    line-height: 1.15;
+  }
+  .account-cover-name p {
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+  .account-mini-label {
+    font-size: 9px;
+  }
+  .account-cover-edit {
+    grid-column: 1/-1;
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+  .account-status-strip {
+    padding: 12px 2px;
+    gap: 7px;
+    font-size: 10px;
+  }
+  .account-status-strip span {
+    width: 100%;
+  }
+  .account-body {
+    margin-top: 14px;
+    gap: 12px;
+  }
+  .account-side-menu {
+    border-radius: 13px;
+  }
+  .account-side-menu button {
+    font-size: 11px;
+    gap: 6px;
+    padding: 10px 11px;
+  }
+  .account-side-menu button:hover {
+    transform: none;
+  }
+  .account-panel {
+    padding: 16px 13px;
+    border-radius: 15px;
+  }
+  .account-panel-head {
+    gap: 12px;
+    margin-bottom: 17px;
+    flex-wrap: wrap;
+  }
+  .account-panel-head h2 {
+    font-size: 19px;
+  }
+  .account-panel-head p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .account-panel-head > .account-btn {
+    width: 100%;
+    min-height: 42px;
+  }
+  .account-details {
+    grid-template-columns: 1fr;
+  }
+  .account-detail {
+    padding: 14px 12px;
+    gap: 11px;
+  }
+  .account-detail-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .account-description {
+    padding: 14px;
+    margin-top: 13px;
+  }
+  .account-panel-foot {
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .account-panel-foot span,
+  .account-panel-foot button {
+    width: 100%;
+  }
+  .account-edit-photo {
+    padding: 12px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .account-edit-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .account-edit-photo > div:last-child {
+    flex: 1 1 170px;
+    min-width: 0;
+  }
+  .account-form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .account-field input,
+  .account-field textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+  .account-editor-footer {
+    flex-direction: column-reverse;
+    gap: 9px;
+  }
+  .account-editor-footer .account-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+  .account-security-feature {
+    padding: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .account-security-symbol {
+    width: 42px;
+    height: 42px;
+  }
+  .account-security-row {
+    flex-wrap: wrap;
+  }
+  .account-disclaimer {
+    padding: 13px;
+  }
+}
+@media (max-width: 360px) {
+  .account-page {
+    padding-inline: 9px;
+  }
+  .account-side-menu button {
+    padding: 9px 8px;
+    font-size: 10px;
+  }
+  .account-cover-name h2 {
+    font-size: 17px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .account-page *,
+  .account-page *::before,
+  .account-page *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .account-password-form {
+    padding: 16px 13px;
+    border-radius: 14px;
+  }
+  .account-password-fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .account-password-fields > .account-field:first-child {
+    grid-column: auto;
+  }
+  .account-password-input > input {
+    font-size: 16px;
+    min-height: 48px;
+  }
+  .account-password-toggle {
+    min-width: 48px;
+  }
+}
