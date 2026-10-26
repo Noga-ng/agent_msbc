@@ -53,3 +53,4 @@ Les parcours titulaire, conjoint et enfant utilisent maintenant une validation c
 ## Modification des fiches membres (nouveau)
 
 Depuis `/membres/:id`, les boutons **Modifier** ouvrent les formulaires du titulaire, du conjoint et de chaque enfant. Le formulaire réutilise les contrôles des inscriptions et envoie les **seuls champs modifiés** aux endpoints PHP configurables ; les données inchangées et la photo existante sont conservées. Pour configurer les routes PHP de mise à jour, voir `DOCS/API_PHP_INTEGRATION.md` et `.env.example`. Les endpoints de modification ne sont pas présents dans l'archive frontend et doivent exister côté serveur.
+# agent_msbc
