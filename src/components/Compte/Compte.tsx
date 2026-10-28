@@ -338,7 +338,7 @@ export default function Compte() {
     },
   ];
 
-    const photoUsers = user?.photo ?? ""; 
+    const photoUsers = PhotoLink('users',user?.photo); 
 
   const show = () =>{
     setVisibility(true);
@@ -427,7 +427,7 @@ export default function Compte() {
           >
             <div className="account-photo">
               {profile?.photo ? (
-                <img src={profile?.photo} alt=" " onClick={show}/>
+                <img src={PhotoLink('users',profile?.photo)} alt=" " onClick={show}/>
               ) : (
                 <span>{initials}</span>
               )}
@@ -671,7 +671,7 @@ export default function Compte() {
                   >
                     <div className="account-edit-avatar">
                       {profile?.photo || preview ? (
-                        <img src={preview === null ? profile.photo : preview} alt=" " />
+                        <img src={preview === null ? PhotoLink('users',profile.photo) : preview} alt=" " />
                       ) : (
                         <span>{initials}</span>
                       )}
@@ -892,4 +892,5 @@ import ResizeImg, { PhotoUrl } from "../../service/ResizeImg";
 import SetFormData from "../../service/formData";
 import { endpointUpdateProfile } from "../../service/Setups/NormalizeEnv";
 import MyProfile from "../../service/Setups/showProfile";
+import PhotoLink from "../../service/Setups/photoSetup";
 
