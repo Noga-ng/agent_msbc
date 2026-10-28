@@ -21,9 +21,9 @@ export default function CheckCategorie({handleClick,state,handlePerson}:Categori
 
      const [backSteps,setBack] = useState<boolean>(false);
 
-    //  const categorie = state.categorie;
+     const categorie = state.categorie;
 
-    //  const exceptC = [5].includes(categorie);
+     const exceptC = [5,6].includes(categorie);
 
       const back = () => setBack(true);
 
@@ -84,7 +84,7 @@ export default function CheckCategorie({handleClick,state,handlePerson}:Categori
             }
 
             {
-                stps === 2 &&
+             stps === 2 &&
 
                 (
               <motion.div 
@@ -106,12 +106,12 @@ export default function CheckCategorie({handleClick,state,handlePerson}:Categori
               }}
               className=" w-fit h-fit min-w-90 min-h-90 max-[400px]:w-80 flex 
               flex-col items-baseline p-5 gap-5 rounded-2xl bg-white ">
-
+               {exceptC &&
                 <button className={s}
                  value={"minor"} type="button" onClick={handlePerson}>
                     <span className="font-bold"> Mineur</span>
                 </button>
-              
+                }
                 <button className={s}
                 value={"major"} type="button" onClick={handlePerson}>
                    <span className="font-bold"> Majeur</span>

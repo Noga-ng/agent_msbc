@@ -18,6 +18,7 @@ import { useAuth } from "../../Auth/UseAuth";
 import "../../assets/css/navigation.css";
 import LoadingState from "../Loaders/LoadingState";
 import MyProfile from "../../service/Setups/showProfile";
+import PhotoLink from "../../service/Setups/photoSetup";
 
 const entries: {
   to: string;
@@ -29,6 +30,7 @@ const entries: {
   { to: "/dashboard", label: "Tableau de bord", icon: LuLayoutDashboard },
   { to: "/inscription", label: "Nouvelle inscription", icon: LuUserRoundPlus },
   { to: "/membres", label: "Liste des membres", icon: LuUsersRound },
+  // { to: "/ajouter-utilisateurs", label: "ajouter un(e) utilisateur", icon: LuUserRoundPlus },
   { to: "/compte", label: "Mon compte", icon: LuUserRound },
 ];
 
@@ -108,7 +110,7 @@ export default function NavBar(): ReactElement {
     }
   };
 
-  const photoUsers = user?.photo.replace('http://localhost:8000/assets/images/users/',''); 
+  const photoUsers = user?.photo;
 
   const show = () =>{
     setVisibility(true);
@@ -164,7 +166,7 @@ export default function NavBar(): ReactElement {
             aria-label="Mon compte"
           >
             {user?.photo ? (
-              <img src={user.photo ?? ""} 
+              <img src={PhotoLink('users',user.photo) ?? ""} 
                    alt={user.noms.slice(0,1).toUpperCase()} 
                    className="flex! items-center-safe justify-center-safe" 
                 />
@@ -279,7 +281,7 @@ export default function NavBar(): ReactElement {
         <div className="agent-nav-account">
           <div className="agent-nav-profile-avatar">
             {user?.photo ? (
-              <img src={user.photo} 
+              <img src={PhotoLink('users',user.photo)} 
                    alt={user.noms.slice(0,1).toUpperCase()} 
                    className="flex! items-center-safe justify-center-safe" 
                    onClick={show}

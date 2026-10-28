@@ -13,6 +13,8 @@ import Compte from "./components/Compte/Compte";
 import { AnimatePresence } from "framer-motion";
 import LoadingState from "./components/Loaders/LoadingState";
 import ErrorPage from "./components/404Error/ErrorPage";
+import Home from "./components/Home";
+import CreatUsers from "./components/createUsers/createUsers";
 
 export default function App() {
   const location = useLocation();
@@ -23,12 +25,13 @@ export default function App() {
     </AnimatePresence>
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Login />} />
+        <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route element={<ProtectedRoute />}>
           <Route path="dashboard" element={<DashBoard />} />
           <Route path="inscription" element={<Titulaire />} />
           <Route path="membres" element={<MembersPage />} />
+          <Route path="ajouter-utilisateurs" element={<CreatUsers />} />
           <Route path="membres/:id" element={<MemberState />} />
           <Route
             path="membres/:id/modifier"
